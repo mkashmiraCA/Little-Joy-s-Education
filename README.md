@@ -4,7 +4,7 @@ A professional, responsive website for Little Joy's Education services.
 
 ## 🌐 Live Website
 
-Your website will be live at: **[https://mkashmiraCA.github.io/Little-Joy-s-Education/](https://mkashmiraCA.github.io/Little-Joy-s-Education/)**
+Your website will be live at: **[https://LittleJoysEducation]**
 
 (May take 1-2 minutes for GitHub Pages to deploy after your first push)
 
