@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Little Joys Education - Learning made enjoyable. Phonics, reading, writing, math and homework support for young learners.">
+  <title>Little Joys Education | Learning Made Enjoyable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --gold:#b99545;
+      --gold-light:#f3df9a;
+      --ink:#1f1f1f;
+      --cream:#fffaf0;
+      --white:#ffffff;
+      --muted:#66615a;
+      --line:#eadfca;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Montserrat',Arial,sans-serif;
+      color:var(--ink);
+      background:var(--cream);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,250,240,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    .brand img{height:62px;width:auto;display:block}
+    nav{display:flex;gap:22px;align-items:center}
+    nav a{text-decoration:none;font-weight:600;font-size:.92rem}
+    nav a:hover{color:var(--gold)}
+    .btn{
+      display:inline-block;padding:13px 21px;border-radius:999px;
+      text-decoration:none;font-weight:700;border:1px solid var(--gold);
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--gold);color:#fff}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+    .btn-outline{background:transparent;color:var(--ink)}
+    .hero{
+      padding:90px 0 80px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(243,223,154,.55), transparent 32%),
+        radial-gradient(circle at 85% 15%, rgba(185,149,69,.16), transparent 30%),
+        var(--cream);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    .eyebrow{
+      display:inline-block;color:#8b6b25;font-weight:800;letter-spacing:.12em;
+      text-transform:uppercase;font-size:.78rem;margin-bottom:14px
+    }
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.03;margin:0 0 22px;letter-spacing:-.04em}
+    h1 span{color:var(--gold)}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:650px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-card{
+      background:#fff;border:1px solid var(--line);border-radius:28px;
+      padding:34px;box-shadow:0 20px 60px rgba(78,57,15,.10);
+      text-align:center;
+    }
+    .hero-card img{max-width:240px;width:70%;height:auto}
+    .hero-card .tag{margin-top:12px;font-weight:700;color:#7d632a}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 12px}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;
+      box-shadow:0 10px 30px rgba(78,57,15,.06)
+    }
+    .icon{
+      width:48px;height:48px;border-radius:14px;background:#f6e8bd;
+      display:grid;place-items:center;font-size:1.35rem;margin-bottom:18px
+    }
+    .card h3{margin:0 0 8px;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:.93rem}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .about-box{
+      background:linear-gradient(145deg,#fff8dc,#f5e5b1);
+      border:1px solid var(--line);border-radius:28px;padding:38px
+    }
+    .about-box h3{font-size:1.7rem;margin-top:0}
+    .checklist{list-style:none;padding:0;margin:24px 0 0}
+    .checklist li{margin:12px 0}
+    .checklist li::before{content:"✓";color:#a17b29;font-weight:800;margin-right:10px}
+    .contact{
+      background:#1f1f1f;color:#fff;
+    }
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .contact p{color:#ddd}
+    .contact-links{display:grid;gap:14px}
+    .contact-link{
+      display:block;background:#2a2a2a;border:1px solid #414141;border-radius:16px;
+      padding:18px 20px;text-decoration:none
+    }
+    .contact-link strong{display:block;color:#f3df9a;margin-bottom:3px}
+    footer{background:#171717;color:#aaa;padding:24px 0;font-size:.82rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){
+      nav{display:none}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .hero{padding-top:55px}
+    }
+    @media(max-width:560px){
+      .cards{grid-template-columns:1fr}
+      .brand img{height:54px}
+      section{padding:62px 0}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Little Joys Education home">
+      <img src="logo.png" alt="Little Joys Education">
+    </a>
+    <nav>
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get Started</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Little Joys Education</div>
+        <h1>Learning made <span>enjoyable.</span></h1>
+        <p>
+          Helping young learners build confidence, strengthen core skills,
+          and discover the joy of learning through supportive, engaging instruction.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Enquire Today</a>
+          <a class="btn btn-outline" href="#programs">Explore Programs</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="logo.png" alt="Little Joys Education logo">
+        <div class="tag">Small steps. Big confidence. Bright futures.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="container">
+      <div class="section-head">
+        <h2>What We Help With</h2>
+        <p>Focused academic support designed to make learning clearer, easier and more enjoyable.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="icon">🔤</div><h3>Phonics</h3><p>Build strong early reading foundations through engaging phonics practice.</p></div>
+        <div class="card"><div class="icon">📚</div><h3>Reading & Writing</h3><p>Develop comprehension, vocabulary, writing skills and confidence.</p></div>
+        <div class="card"><div class="icon">➗</div><h3>Math</h3><p>Strengthen number sense, problem-solving and essential math skills.</p></div>
+        <div class="card"><div class="icon">✏️</div><h3>Homework Support</h3><p>Provide guidance and structure so students can complete work with confidence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-box">
+        <h3>A positive place to learn.</h3>
+        <p>We aim to create a welcoming learning environment where every child can progress at their own pace.</p>
+        <ul class="checklist">
+          <li>Small-group learning</li>
+          <li>Individual attention</li>
+          <li>Encouraging, student-focused support</li>
+          <li>Strong academic foundations</li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Our Approach</div>
+        <h2>Helping children learn with confidence.</h2>
+        <p>
+          At Little Joys Education, learning is more than completing worksheets.
+          We focus on understanding, practice and encouragement so students can
+          feel proud of their progress.
+        </p>
+        <a class="btn btn-primary" href="#contact">Connect With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Families Choose Little Joys</h2>
+        <p>A simple, supportive approach that puts the learner first.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="icon">🌟</div><h3>Engaging Learning</h3><p>We make lessons approachable and enjoyable so children stay motivated.</p></div>
+        <div class="card"><div class="icon">🎯</div><h3>Focused Support</h3><p>Instruction can be tailored to the learner's needs and current level.</p></div>
+        <div class="card"><div class="icon">💡</div><h3>Build Understanding</h3><p>We emphasize clear concepts and practical practice—not just memorization.</p></div>
+        <div class="card"><div class="icon">💛</div><h3>Celebrate Progress</h3><p>Every improvement matters. We encourage confidence one step at a time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div>
+        <div class="eyebrow">Let's Connect</div>
+        <h2>Ready to make learning more enjoyable?</h2>
+        <p>Follow Little Joys Education on social media or reach out directly for program information and availability.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.instagram.com/littlejoyseducation/" target="_blank" rel="noopener">
+          <strong>Instagram</strong> @littlejoyseducation
+        </a>
+        <a class="contact-link" href="https://www.facebook.com/profile.php?id=61575545101349" target="_blank" rel="noopener">
+          <strong>Facebook</strong> Little Joys Education
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 Little Joys Education. All rights reserved.</div>
+    <div>Learning made enjoyable.</div>
+  </div>
+</footer>
+</body>
+</html>
